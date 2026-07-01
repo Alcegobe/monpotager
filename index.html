@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mon Potager</title>
+  <meta name="description" content="Guide pas à pas pour préparer, cultiver et entretenir son potager et sa serre.">
+  <meta name="theme-color" content="#2e7d32">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Mon Potager">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <header class="app-bar">
+    <div class="app-title">🌻 Mon Potager</div>
+    <button id="install" class="btn-install" hidden>⬇️ Installer</button>
+  </header>
+
+  <main id="view" class="view"><!-- contenu injecté par app.js --></main>
+
+  <nav id="tabbar" class="tabbar" aria-label="Navigation principale"><!-- onglets --></nav>
+
+  <script src="./js/data.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

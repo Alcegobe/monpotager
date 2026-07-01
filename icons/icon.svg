@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Mon Potager">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#43a047"/>
+      <stop offset="1" stop-color="#2e7d32"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="512" height="512" rx="112" fill="url(#g)"/>
+  <rect x="0" y="400" width="512" height="112" fill="#795548"/>
+  <rect x="244" y="215" width="24" height="200" fill="#fff"/>
+  <ellipse cx="210" cy="230" rx="82" ry="44" fill="#fff" transform="rotate(35 210 230)"/>
+  <ellipse cx="302" cy="230" rx="82" ry="44" fill="#fff" transform="rotate(-35 302 230)"/>
+</svg>
