@@ -362,4 +362,87 @@ const PLANTES = [
       'Sécher ou congeler le surplus pour l\'hiver.',
     ],
   },
+  {
+    id: 'chicon', nom: 'Chicon (witloof)', emoji: '🥬', famille: 'Astéracées', serre: true,
+    saisons: ['printemps'],
+    semis: 'Mai–Juin, en pleine terre (racines)',
+    plantation: 'Forçage des racines : Novembre–Février',
+    recolte: 'Novembre–Mars (après forçage à l\'obscurité)',
+    entretien: [
+      { id: 'e-chicon-1', txt: 'Semer clair puis éclaircir à ~10 cm' },
+      { id: 'e-chicon-2', txt: 'Laisser grossir les racines tout l\'été' },
+      { id: 'e-chicon-3', txt: 'Arracher les racines à l\'automne, couper le feuillage à 2 cm' },
+      { id: 'e-chicon-4', txt: 'Forcer à l\'obscurité (cave, bac, serre couverte) vers 15–18 °C' },
+    ],
+    astuces: [
+      'Grand classique belge : le forçage à l\'obscurité donne le chicon bien blanc.',
+      'Un peu de lumière rend le chicon vert et amer : bien couvrir pendant le forçage.',
+    ],
+  },
+  {
+    id: 'choux-bxl', nom: 'Choux de Bruxelles', emoji: '🥦', famille: 'Brassicacées', serre: false,
+    saisons: ['printemps'],
+    semis: 'Mars–Avril',
+    plantation: 'Mai–Juin (repiquage)',
+    recolte: 'Octobre–Février (meilleurs après les premières gelées)',
+    entretien: [
+      { id: 'e-chouxbxl-1', txt: 'Repiquer en laissant 60 cm entre les plants' },
+      { id: 'e-chouxbxl-2', txt: 'Butter et tuteurer (les pieds deviennent hauts et lourds)' },
+      { id: 'e-chouxbxl-3', txt: 'Surveiller la piéride du chou (chenilles) — voile conseillé' },
+      { id: 'e-chouxbxl-4', txt: 'Récolter de bas en haut au fur et à mesure' },
+    ],
+    astuces: [
+      'Une petite gelée adoucit les choux : patienter avant de récolter.',
+      'Pincer la tête du plant en automne fait grossir les choux uniformément.',
+    ],
+  },
+  {
+    id: 'mache', nom: 'Mâche (doucette)', emoji: '🥗', famille: 'Caprifoliacées', serre: true,
+    saisons: ['ete', 'automne'],
+    semis: 'Août–Septembre, en place',
+    plantation: '—',
+    recolte: 'Octobre–Mars',
+    entretien: [
+      { id: 'e-mache-1', txt: 'Semer sur sol tassé et frais' },
+      { id: 'e-mache-2', txt: 'Garder humide jusqu\'à la levée' },
+      { id: 'e-mache-3', txt: 'Récolter la rosette entière au couteau' },
+    ],
+    astuces: [
+      'Très rustique : parfaite pour récolter de la salade tout l\'hiver belge.',
+      'Un voile ou la serre avancent la récolte lors des grands froids.',
+    ],
+  },
+  {
+    id: 'betterave', nom: 'Betterave rouge', emoji: '🟣', famille: 'Amaranthacées', serre: false,
+    saisons: ['printemps', 'ete'],
+    semis: 'Avril–Juin, en place',
+    plantation: '—',
+    recolte: 'Juillet–Octobre',
+    entretien: [
+      { id: 'e-betterave-1', txt: 'Éclaircir à ~10 cm (un semis = plusieurs plants)' },
+      { id: 'e-betterave-2', txt: 'Biner et garder le sol frais' },
+      { id: 'e-betterave-3', txt: 'Récolter avant qu\'elles deviennent trop grosses (fibreuses)' },
+    ],
+    astuces: [
+      'Se conserve tout l\'hiver en cave, dans du sable.',
+      'Les jeunes feuilles se mangent comme des épinards.',
+    ],
+  },
+  {
+    id: 'potiron', nom: 'Potiron / Courge', emoji: '🎃', famille: 'Cucurbitacées', serre: false,
+    saisons: ['printemps'],
+    semis: 'Avril–Mai, au chaud',
+    plantation: 'Mi-mai à juin (après les Saints de Glace)',
+    recolte: 'Septembre–Octobre, avant les gelées',
+    entretien: [
+      { id: 'e-potiron-1', txt: 'Prévoir beaucoup de place (1–2 m par pied)' },
+      { id: 'e-potiron-2', txt: 'Pailler et arroser copieusement au pied' },
+      { id: 'e-potiron-3', txt: 'Glisser une planchette sous les fruits pour éviter qu\'ils pourrissent' },
+      { id: 'e-potiron-4', txt: 'Récolter avant les gelées, laisser sécher le pédoncule' },
+    ],
+    astuces: [
+      'Planter sur le tas de compost : la courge adore le sol riche.',
+      'Bien mûres, les courges se conservent des mois au sec et au frais.',
+    ],
+  },
 ];

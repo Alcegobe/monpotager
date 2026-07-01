@@ -116,6 +116,13 @@ h2.sep { margin-top: 28px; padding-top: 18px; border-top: 2px dashed var(--line)
 .astuces ul { margin: 6px 0 2px; padding-left: 20px; color: var(--muted); line-height: 1.5; }
 .astuces li { margin: 4px 0; }
 
+/* ---- Encart d'information --------------------------------------------- */
+.note {
+  background: #eef7ea; border: 1px solid var(--line); border-left: 4px solid var(--green);
+  border-radius: 12px; padding: 12px 14px; margin: 0 0 16px;
+  color: var(--ink); font-size: .9rem; line-height: 1.5;
+}
+
 /* ---- Filtres saisons (chips) ----------------------------------------- */
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
 .chip {

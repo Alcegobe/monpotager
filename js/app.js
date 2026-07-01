@@ -131,6 +131,10 @@ function renderCalendrier() {
     <p class="lead">Nous sommes en <strong>${moisNom(new Date().getMonth() + 1)}</strong>
       — saison ${now.emoji} <strong>${now.nom}</strong>. Ajoute des plantes à ton potager
       pour suivre leur entretien dans l'onglet « Mon potager ».</p>
+    <div class="note">🇧🇪 Adapté au <strong>climat belge</strong> (tempéré, zone 8) : on sème souvent
+      au chaud ou sous serre, puis on plante en pleine terre après les <strong>Saints de Glace</strong>
+      (mi-mai, fin des gelées). Uniquement des cultures qui poussent réellement chez nous
+      — pas de tropicales.</div>
     <div class="chips">${toutes}${chips}</div>
     <div class="plant-list">${liste || '<p class="empty">Aucune plante pour ce filtre.</p>'}</div>
   `;
