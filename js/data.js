@@ -445,4 +445,25 @@ const PLANTES = [
       'Bien mûres, les courges se conservent des mois au sec et au frais.',
     ],
   },
+  {
+    id: 'kiwi', nom: 'Kiwi', emoji: '🥝', famille: 'Actinidiacées', serre: false,
+    saisons: ['printemps', 'automne'],
+    semis: '—',
+    plantation: 'Mars–Avril ou Octobre–Novembre (plant en godet)',
+    recolte: 'Octobre–Novembre (après 3–4 ans, avant les fortes gelées)',
+    entretien: [
+      { id: 'e-kiwi-1', txt: 'Installer un support solide (pergola, treillage, fil tendu)' },
+      { id: 'e-kiwi-2', txt: 'Palisser les lianes au fur et à mesure' },
+      { id: 'e-kiwi-3', txt: 'Arroser généreusement en été (racines superficielles)' },
+      { id: 'e-kiwi-4', txt: 'Pailler le pied ; il craint la sécheresse' },
+      { id: 'e-kiwi-5', txt: 'Tailler en hiver (hors gel) puis en été pour aérer' },
+      { id: 'e-kiwi-6', txt: 'Protéger les jeunes pousses des gelées tardives (voile)' },
+    ],
+    astuces: [
+      'En Belgique : le placer contre un mur exposé plein sud, à l\'abri du vent.',
+      'Il faut en général un pied mâle pour ~5 pieds femelles — sauf variété autofertile (ex. « Jenny »).',
+      'Patience : les premiers fruits arrivent après 3 à 4 ans.',
+      'Récolter fermes en automne et laisser mûrir quelques semaines à l\'intérieur.',
+    ],
+  },
 ];
