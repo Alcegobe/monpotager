@@ -1,0 +1,189 @@
+/* =========================================================================
+   Mon Potager — feuille de style. Mobile-first, thème vert nature.
+   ========================================================================= */
+:root {
+  --green: #2e7d32;
+  --green-d: #1b5e20;
+  --green-l: #66bb6a;
+  --green-bg: #f1f8e9;
+  --soil: #795548;
+  --ink: #1f2a24;
+  --muted: #5c6b60;
+  --card: #ffffff;
+  --line: #e2ece1;
+  --shadow: 0 2px 10px rgba(27, 94, 32, .08);
+  --radius: 16px;
+  --bar-h: 66px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  background: var(--green-bg);
+  -webkit-tap-highlight-color: transparent;
+  padding-bottom: calc(var(--bar-h) + env(safe-area-inset-bottom));
+}
+
+/* ---- Barre d'application --------------------------------------------- */
+.app-bar {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px;
+  padding: calc(env(safe-area-inset-top) + 12px) 16px 12px;
+  background: linear-gradient(135deg, var(--green), var(--green-d));
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+}
+.app-title { font-size: 1.2rem; font-weight: 700; letter-spacing: .2px; }
+.btn-install {
+  border: 0; border-radius: 999px; padding: 8px 14px;
+  background: rgba(255, 255, 255, .95); color: var(--green-d);
+  font-weight: 600; font-size: .9rem; cursor: pointer;
+}
+
+/* ---- Contenu --------------------------------------------------------- */
+.view { max-width: 760px; margin: 0 auto; padding: 18px 16px 8px; }
+h2 { font-size: 1.35rem; margin: 6px 0 4px; }
+h2.sep { margin-top: 28px; padding-top: 18px; border-top: 2px dashed var(--line); }
+.lead { color: var(--muted); margin: 4px 0 16px; line-height: 1.45; }
+.empty { color: var(--muted); text-align: center; }
+.empty.big { padding: 40px 10px; line-height: 1.6; font-size: 1.05rem; }
+
+/* ---- Barre de progression -------------------------------------------- */
+.progress {
+  position: relative; height: 26px; border-radius: 999px;
+  background: #dfeadd; overflow: hidden; margin: 0 0 18px;
+}
+.progress-bar {
+  height: 100%; border-radius: 999px;
+  background: linear-gradient(90deg, var(--green-l), var(--green));
+  transition: width .35s ease;
+}
+.progress-label {
+  position: absolute; inset: 0; display: grid; place-items: center;
+  font-size: .78rem; font-weight: 700; color: var(--green-d);
+}
+
+/* ---- Cartes ---------------------------------------------------------- */
+.card {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 14px 16px; margin: 0 0 14px;
+}
+.card-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  margin-bottom: 8px;
+}
+.card-head h3 { font-size: 1.05rem; margin: 0; }
+.mini-count {
+  font-size: .78rem; font-weight: 700; color: var(--green-d);
+  background: var(--green-bg); border-radius: 999px; padding: 3px 9px;
+  white-space: nowrap;
+}
+
+/* ---- Checklists ------------------------------------------------------ */
+.checklist { list-style: none; margin: 0; padding: 0; }
+.checklist li + li { border-top: 1px solid var(--line); }
+.check {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 11px 2px; cursor: pointer; line-height: 1.4;
+}
+.check input { position: absolute; opacity: 0; width: 0; height: 0; }
+.box {
+  flex: 0 0 auto; width: 24px; height: 24px; margin-top: 1px;
+  border: 2px solid var(--green-l); border-radius: 7px;
+  display: grid; place-items: center; transition: all .15s ease;
+}
+.box::after {
+  content: "✓"; color: #fff; font-size: 15px; font-weight: 800;
+  transform: scale(0); transition: transform .15s ease;
+}
+.check input:checked + .box { background: var(--green); border-color: var(--green); }
+.check input:checked + .box::after { transform: scale(1); }
+.check input:focus-visible + .box { outline: 3px solid var(--green-l); outline-offset: 2px; }
+.check.is-done .txt { color: var(--muted); text-decoration: line-through; }
+.txt { flex: 1; }
+
+/* ---- Astuces --------------------------------------------------------- */
+.astuces { margin-top: 10px; border-top: 1px dashed var(--line); padding-top: 8px; }
+.astuces summary {
+  cursor: pointer; font-weight: 600; color: var(--green-d);
+  list-style: none; padding: 4px 0;
+}
+.astuces summary::-webkit-details-marker { display: none; }
+.astuces ul { margin: 6px 0 2px; padding-left: 20px; color: var(--muted); line-height: 1.5; }
+.astuces li { margin: 4px 0; }
+
+/* ---- Encart d'information --------------------------------------------- */
+.note {
+  background: #eef7ea; border: 1px solid var(--line); border-left: 4px solid var(--green);
+  border-radius: 12px; padding: 12px 14px; margin: 0 0 16px;
+  color: var(--ink); font-size: .9rem; line-height: 1.5;
+}
+
+/* ---- Filtres saisons (chips) ----------------------------------------- */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.chip {
+  border: 1px solid var(--green-l); background: #fff; color: var(--green-d);
+  border-radius: 999px; padding: 7px 14px; font-size: .88rem; font-weight: 600;
+  cursor: pointer; transition: all .15s ease;
+}
+.chip.is-on { background: var(--green); color: #fff; border-color: var(--green); }
+
+/* ---- Liste des plantes (calendrier) ---------------------------------- */
+.plant-list { display: flex; flex-direction: column; gap: 12px; }
+.plant-row {
+  display: grid; grid-template-columns: auto 1fr; gap: 4px 14px;
+  align-items: start;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: var(--radius); box-shadow: var(--shadow); padding: 14px 16px;
+}
+.plant-emoji { font-size: 2rem; line-height: 1; grid-row: span 2; }
+.plant-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.plant-top h3 { margin: 0; font-size: 1.1rem; }
+.plant-when { margin: 8px 0 0; display: grid; gap: 4px; }
+.plant-when > div { display: grid; grid-template-columns: 92px 1fr; gap: 8px; }
+.plant-when dt { color: var(--green-d); font-weight: 700; font-size: .82rem; }
+.plant-when dd { margin: 0; color: var(--muted); font-size: .9rem; }
+.tag {
+  font-size: .72rem; font-weight: 700; border-radius: 999px;
+  padding: 2px 8px; white-space: nowrap;
+}
+.tag-serre { background: #fff3e0; color: #e65100; }
+.btn-add {
+  grid-column: 2; justify-self: start; margin-top: 12px;
+  border: 1.5px solid var(--green); background: #fff; color: var(--green-d);
+  border-radius: 999px; padding: 8px 16px; font-weight: 600; font-size: .88rem;
+  cursor: pointer; transition: all .15s ease;
+}
+.btn-add.is-in { background: var(--green); color: #fff; }
+
+/* ---- Mon potager ----------------------------------------------------- */
+.plant-card .tag { background: #fff3e0; }
+.link-remove {
+  display: block; margin: 10px 0 0 auto; border: 0; background: none;
+  color: #b23b3b; font-size: .82rem; cursor: pointer; padding: 4px; font-weight: 600;
+}
+
+/* ---- Barre d'onglets ------------------------------------------------- */
+.tabbar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  background: #fff; border-top: 1px solid var(--line);
+  padding-bottom: env(safe-area-inset-bottom);
+  box-shadow: 0 -2px 12px rgba(27, 94, 32, .08);
+}
+.tab {
+  border: 0; background: none; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 9px 4px; color: var(--muted); font-size: .72rem; font-weight: 600;
+}
+.tab-ico { font-size: 1.35rem; line-height: 1; filter: grayscale(.4); opacity: .7; }
+.tab.is-on { color: var(--green-d); }
+.tab.is-on .tab-ico { filter: none; opacity: 1; transform: translateY(-1px); }
+
+@media (min-width: 620px) {
+  .tab-lbl { font-size: .8rem; }
+}
